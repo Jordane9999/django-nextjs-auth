@@ -47,7 +47,7 @@ const ResetPasswordConfirmation = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="px-8 py-6 mt-4 text-left bg-white shadow-lg w-1/3">
-        <h3 className="text-2xl font-semibold">Set New Password</h3>
+        <h3 className="text-2xl font-semibold text-black">Set New Password</h3>
         <form onSubmit={handleSubmit(onSubmit)} className="mt-4">
           <label className="block" htmlFor="password">
             New Password
@@ -56,7 +56,7 @@ const ResetPasswordConfirmation = () => {
             type="password"
             placeholder="Enter your new password"
             {...register("password", { required: true })}
-            className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+            className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 text-black"
           />
           {errors.password && (
             <span className="text-xs text-red-600">Password is required</span>

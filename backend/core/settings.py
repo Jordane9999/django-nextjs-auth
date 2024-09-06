@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # installed apps,
+    "django_use_email_as_username.apps.DjangoUseEmailAsUsernameConfig",
+    "custom_user",
     "corsheaders",
     "rest_framework",
     "djoser",
@@ -45,6 +47,8 @@ INSTALLED_APPS = [
     # owne app
     "authentication",
 ]
+
+AUTH_USER_MODEL = "custom_user.User"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

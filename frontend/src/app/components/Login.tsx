@@ -26,11 +26,12 @@ const Login = () => {
       .json((json) => {
         storeToken(json.access, "access");
         storeToken(json.refresh, "refresh");
+        console.log("je suis rentrer");
 
         router.push("dashboard");
       })
       .catch((err) => {
-        setError("root", { type: "manual", message: err.json.detail });
+        setError("root", { type: "manual", message: err.json });
       });
   };
 
@@ -49,7 +50,7 @@ const Login = () => {
               type="text"
               placeholder="Email"
               {...register("email", { required: true })}
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 text-black"
             />
             {errors.email && (
               <span className="text-xs text-red-600">Email is required</span>
@@ -63,7 +64,7 @@ const Login = () => {
               type="password"
               placeholder="Password"
               {...register("password", { required: true })}
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 text-black"
             />
             {errors.password && (
               <span className="text-xs text-red-600">Password is required</span>

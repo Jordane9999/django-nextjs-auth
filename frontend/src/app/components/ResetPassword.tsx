@@ -35,7 +35,7 @@ const ResetPassword = () => {
             type="email"
             placeholder="Enter your email"
             {...register("email", { required: true })}
-            className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+            className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 text-black"
           />
           {errors.email && (
             <span className="text-xs text-red-600">Email is required</span>
