@@ -1,5 +1,11 @@
-import React from "react";
+"use client";
 
-export default function ResetPasswordConfirmationPage() {
-  return <div>ResetPasswordConfirmation</div>;
+import ResetPasswordConfirmation from "@/app/components/ResetPasswordConfirmation";
+
+export default function Home() {
+  return (
+    <main>
+      <ResetPasswordConfirmation />
+    </main>
+  );
 }

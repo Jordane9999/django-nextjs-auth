@@ -1,5 +1,11 @@
-import React from "react";
+"use client";
 
-export default function ResetPasswordPage() {
-  return <div>ResetPassword</div>;
+import ResetPassword from "@/app/components/ResetPassword";
+
+export default function Home() {
+  return (
+    <main>
+      <ResetPassword />
+    </main>
+  );
 }

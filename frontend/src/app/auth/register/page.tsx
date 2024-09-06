@@ -1,5 +1,11 @@
-import React from "react";
+"use client";
 
-export default function RegisterPage() {
-  return <div>Register</div>;
+import Register from "@/app/components/Register";
+
+export default function Home() {
+  return (
+    <main>
+      <Register />
+    </main>
+  );
 }
